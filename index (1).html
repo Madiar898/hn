@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Все задания CSS</title>
+
+<style>
+
+/* ===== УРОК 1 (фон) ===== */
+body {
+    background-image: url("https://picsum.photos/100");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    font-family: Arial;
+}
+
+/* ===== УРОК 2 (текст) ===== */
+h1 {
+    color: darkblue;
+    background-color: rgb(140,220,200);
+}
+
+ul {
+    background-color: rgb(200,160,200);
+    color: #dda0dd;
+    text-decoration: overline;
+}
+
+ol {
+    background-color: #DAFFC3;
+    color: blue;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+p {
+    background-color: grey;
+    color: green;
+    letter-spacing: 2px;
+    text-indent: 2em;
+}
+
+span.back {
+    background-color: black;
+    color: white;
+}
+
+/* ===== УРОК 3 ===== */
+p.letter:first-letter {
+    font-weight: bold;
+    font-size: 2em;
+    color: red;
+}
+
+strong {
+    color: red;
+}
+
+span.accent {
+    background: #bfffbf;
+    color: blue;
+    font-weight: bold;
+}
+
+/* ===== УРОК 4 (списки) ===== */
+#list1 {
+    background: pink;
+    width: 200px;
+}
+
+#list2 {
+    background: lightblue;
+    width: 200px;
+    list-style-position: inside;
+}
+
+/* ===== УРОК 5 (ссылки) ===== */
+a:link { color: #33ccff; }
+a:visited { color: #cecece; }
+a:hover { color: #336666; }
+a:active { color: #339999; }
+
+.menu a {
+    display: block;
+    width: 150px;
+    padding: 5px;
+    background: #0076ba;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.menu a:hover {
+    background: orange;
+}
+
+/* ===== УРОК 6 (позиционирование) ===== */
+.box {
+    position: relative;
+    border: 2px solid black;
+    padding: 10px;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+
+#scroll { overflow: scroll; }
+#hidden { overflow: hidden; }
+#visible { overflow: visible; }
+
+#clip1, #clip2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+#clip1 {
+    background-image: url("https://picsum.photos/200");
+}
+
+#clip2 {
+    background: blue;
+    clip: rect(20px,150px,150px,20px);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Урок 1</h1>
+<ul>
+<li>Первый пункт</li>
+<li>Второй пункт</li>
+<li>Третий пункт</li>
+</ul>
+
+<ol>
+<li>Первый пункт</li>
+<li>Второй пункт</li>
+<li>Третий пункт</li>
+</ol>
+
+<p>Это параграф текста</p>
+
+<h1>Урок 2</h1>
+<p>Обычный текст и <span class="back">выделенный</span></p>
+
+<pre style="text-transform: uppercase;">верхний регистр</pre>
+<p style="text-transform: lowercase;">НИЖНИЙ РЕГИСТР</p>
+<pre style="text-transform: capitalize;">каждое слово большое</pre>
+
+<h1>Урок 3</h1>
+<p class="letter">Это пример буквицы</p>
+
+<p>
+<strong>Жирный текст</strong> и <span class="accent">выделение</span>
+</p>
+
+<p>Моноширинный текст: <tt>код</tt></p>
+<p><abbr title="World Wide Web">WWW</abbr></p>
+
+<h1>Урок 4 (списки)</h1>
+
+<div id="ls">
+<ul id="list1">
+<li>Первый список</li>
+<li>Второй пункт</li>
+<li>Третий пункт</li>
+</ul>
+
+<ul id="list2">
+<li>Первый список</li>
+<li>Второй пункт</li>
+<li>Третий пункт</li>
+</ul>
+</div>
+
+<h1>Урок 5 (ссылки)</h1>
+
+<div class="menu">
+<a href="#p1">К p1</a>
+<a href="#p2">К p2</a>
+<a href="#end">В конец</a>
+</div>
+
+<p id="p1"><strong>Секция p1</strong> текст текст текст</p>
+<p id="p2"><strong>Секция p2</strong> текст текст текст</p>
+
+<a id="end"></a>
+
+<h1>Урок 6 (overflow)</h1>
+
+<div id="scroll" class="box">
+Много текста Много текста Много текста Много текста
+</div>
+
+<div id="hidden" class="box">
+Много текста Много текста Много текста Много текста
+</div>
+
+<div id="visible" class="box">
+Много текста Много текста Много текста Много текста
+</div>
+
+<h2>Clip</h2>
+<div id="clip1"></div>
+<div id="clip2"></div>
+
+</body>
+</html>
